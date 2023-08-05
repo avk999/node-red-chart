@@ -89,6 +89,9 @@ service:
   type: ClusterIP
   # -- Kubernetes port where service is exposed
   port: 1880
+  annotations: {}
+  #  ann1: val1
+  #  ann2: val2
 
 #  Enable Service-Monitor for node-red
 metrics:

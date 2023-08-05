@@ -5,6 +5,7 @@ metadata:
   namespace: {{ .Release.Namespace | quote }}
   labels:
     {{- include "node-red.labels" . | nindent 4 }}
+  annotations: {{ .Values.service.annotations | toYaml | nindent 4}}
 spec:
   type: {{ .Values.service.type }}
   ports:
